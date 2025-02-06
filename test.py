@@ -75,7 +75,7 @@ while True:
         break
     text = chat(inpt)
     text_no_newlines = text.replace('\n', ' ').replace('\r', ' ')
-    for i, j in enumerate(cosyvoice.inference_instruct2(text_no_newlines, '用四川话说这句话', prompt_speech_16k, stream=False)):
+    for i, j in enumerate(cosyvoice.inference_instruct2(text_no_newlines, '用普通话说这句话', prompt_speech_16k, stream=False)):
         filename = f"instruct_{i}.wav"  # 动态生成文件名
         torchaudio.save(filename, j['tts_speech'], cosyvoice.sample_rate)
         playsoundfromfile(filename)  # 使用变量传递文件名
