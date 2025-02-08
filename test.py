@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup
 
 API_URL = "http://127.0.0.1:11434/api/generate"
 cosyvoice = CosyVoice2('pretrained_models/CosyVoice2-0.5B', load_jit=False, load_trt=True, fp16=True)
-prompt_speech_16k = load_wav('zero_shot_prompt_明.wav', 16000)
+prompt_speech_16k = load_wav('zero_shot_prompt_米雪儿李.wav', 16000)
 global on_init,context
 on_init = True
 context = None
